@@ -21,6 +21,25 @@ function App() {
         <>
           <Link to='/login'>Login</Link>
           <Link to='/register'>Register</Link>
+          <button onClick={
+            ()=>{supabase.auth.signInWithOAuth({
+              provider: "google",
+              options: {
+                redirectTo: "http://localhost:5173/home"
+              }
+            })}
+          }>SignInWithGoogle</button>
+          <button onClick=
+            {
+              ()=>{supabase.auth.signInWithOAuth({
+                provider: "github",
+                options: {
+                  redirectTo: "http://localhost:5173/home"
+                }
+              })}
+            }
+          >SignInWithGithub</button>
+
         </>
       }
     </>

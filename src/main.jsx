@@ -7,11 +7,15 @@ import { AuthProvider } from "./context/authContext.jsx";
 
 import Login from './auth/Login.jsx'
 import Register from './auth/Register.jsx'
-
+import Home from "./pages/Home.jsx";
 const paths = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/home",
+    element: <Home/>
   },
   {
     path: "/login",
